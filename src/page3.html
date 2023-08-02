@@ -1,112 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noticias</title>
-    <link rel="icon" href="/images/informe-de-noticias.png" type= "image/png">
+    <link rel="icon" href="/images/informe-de-noticias.png" type="image/png" />
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            height: 90vh;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        body,
-        html {
-            height: 100%;
-            background-color: black;
-        }
+      body {
+        background-color: black;
+      }
 
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        
+      }
+
+      .video {
+        position: relative;
+        width: 100%;
+        padding: 1px;
+        /* Agrega un espacio de padding alrededor de los videos */
+        display: flex;
+        /* Utiliza flexbox para centrar los videos */
+        align-items: stretch;
+        justify-content: center;
+        align-content: space-around;
+      }
+
+      .video iframe {
+        max-width: 100%;
+        /* Ajusta el tamaño máximo del iframe */
+        max-height: 100%;
+        /* Ajusta la altura máxima del iframe */
+      }
+
+      .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+        padding: 2px;
+        background-color: #000000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .botones {
+        height: 30px; /* Ajusta la altura de los botones */
+        min-width: 100px; /* Ajusta el ancho mínimo de los botones */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #17020f;
+        color: #9bcad6;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+      }
+
+
+      @media screen and (max-width: 768px) {
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 1fr;
-
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(2, 1fr);
         }
+      }
 
-        .video {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            padding: 1px;
-            /* Agrega un espacio de padding alrededor de los videos */
-            display: flex;
-            /* Utiliza flexbox para centrar los videos */
-            align-items: stretch;
-            justify-content: center;
-            align-content: space-around;
+      @media screen and (max-width: 480px) {
+        .gallery {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(2, 1fr);
         }
-
-        .video iframe {
-            max-width: 100%;
-            /* Ajusta el tamaño máximo del iframe */
-            max-height: 100%;
-            /* Ajusta la altura máxima del iframe */
-        }
-
-        .btn {
-            display: flex;
-            justify-content: center;
-            /* Alinea los botones horizontalmente en el centro */
-            position: relative;
-            bottom: -10px;
-            left: 0;
-            right: 0;
-            gap: 30px;
-            /* Fija la posición de los botones en la parte inferior */
-        }
-
-        .botones {
-            height: 20px;
-            width: 100px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        @media screen and (max-width: 768px) {
-            .gallery {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(2, 1fr);
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .gallery {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(2, 1fr);
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="gallery">
-        <div class="video">
-            <iframe width="700" height="280" src="https://www.youtube.com/embed/4e8Iw3Frf1A"
-                title="LN+ EN VIVO - Últimas noticias de la Argentina y el mundo" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </div>
-        <div class="video">
-            <iframe width="700" height="280" src="https://www.youtube.com/embed/QGpHLgRnrx4"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </div>
+      <div class="video">
+        <iframe
+          width="700"
+          height="500"
+          src="https://www.youtube.com/embed/4e8Iw3Frf1A"
+          title="LN+ EN VIVO - Últimas noticias de la Argentina y el mundo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="video">
+        <iframe
+          width="700"
+          height="500"
+          src="https://www.youtube.com/embed/QGpHLgRnrx4"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
-    <div class="btn">
-        <a href="/index.html"><button class="botones">x6</button></a>
-        <a href="/src/page2.html"><button class="botones">x4</button></a>
-        <a href="/src/page3.html"><button class="botones">2</button></a>
+    <div class="nav">
+      <a href="/index.html"><button class="botones">x6</button></a>
+      <a href="/src/page2.html"><button class="botones">x4</button></a>
+      <a href="/src/page3.html"><button class="botones">x2</button></a>
     </div>
-</body>
-
+  </body>
 </html>
