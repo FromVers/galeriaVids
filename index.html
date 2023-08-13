@@ -1,181 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noticias</title>
-    <link rel="icon" href="./images/informe-de-noticias.png" type="image/png" />
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
 
-      body {
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noticias</title>
+  <link rel="icon" href="./images/informe-de-noticias.png" type="image/png" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      .nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: center;
-        justify-content: space-around;
-        padding: 2px;
-        background-color: #000000;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
+    body {
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+    }
 
-      .botones {
-        height: 30px; /* Ajusta la altura de los botones */
-        min-width: 100px; /* Ajusta el ancho mínimo de los botones */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #17020f;
-        color: #9bcad6;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none;
-      }
+    .nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      justify-content: space-around;
+      padding: 2px;
+      background-color: #000000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
+    .botones {
+      height: 30px;
+      /* Ajusta la altura de los botones */
+      min-width: 100px;
+      /* Ajusta el ancho mínimo de los botones */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #17020f;
+      color: #9bcad6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 2px;
+      padding: 2px;
+      overflow: hidden;
+    }
+
+    .video {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 2px;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .video iframe {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
       .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 2px;
-        padding: 2px;
-        overflow: hidden;
       }
+    }
 
-      .video {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        padding: 2px;
-        display: flex;
-        align-items: stretch;
+    @media screen and (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
       }
+    }
 
-      .video iframe {
-        max-width: 100%;
-        max-height: 100%;
+    @media screen and (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
       }
+    }
 
-      @media screen and (max-width: 768px) {
-        .gallery {
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-        }
+    @media screen and (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
       }
+    }
+  </style>
+</head>
 
-      @media screen and (max-width: 480px) {
-        .gallery {
-          grid-template-columns: 1fr;
-          grid-template-rows: repeat(6, 1fr);
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        .gallery {
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-        }
-      }
-
-      @media screen and (max-width: 480px) {
-        .gallery {
-          grid-template-columns: 1fr;
-          grid-template-rows: repeat(6, 1fr);
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="gallery">
-      <!--LN+-->
-      <div class="video">
-        <iframe
-          width="700"
-          height="240"
-          src="https://www.youtube.com/embed/4e8Iw3Frf1A?si=dL2cpLXG8i-yUye1"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <!--a24-->
-      <div class="video">
-        <iframe
-          width="700"
-          height="240"
-          src="https://www.youtube.com/embed/QGpHLgRnrx4"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <!--TN-->
-      <div class="video">
-        <iframe
-          width="700"
-          height="240"
-          src="https://www.youtube.com/embed/HPiv1pzIPRc"
-          title="tn"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <!--Mitre-->
-      <div class="video">
-        <iframe
-          width="700"
-          height="240"
-          src="https://www.youtube.com/embed/2IfTdw28WFY"
-          title="CANAL 26 EN VIVO | Noticias internacionales y de Argentina"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <!--kronica-->
-      <div class="video">
-        <iframe
-          width="700"
-          height="240"
-          src="https://www.youtube.com/embed/avly0uwZzOE"
-          title="cronica"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <!--K5N-->
-      <div class="video">
-        <iframe
-          width="700"
-          height="240"
-          src="https://www.youtube.com/embed/ekid6Im1dOc"
-          title="k5n"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
+<body>
+  <div class="gallery">
+    <!--LN+-->
+    <div class="video">
+      <iframe width="700" height="240" src="https://www.youtube.com/embed/4e8Iw3Frf1A?si=dL2cpLXG8i-yUye1"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     </div>
-    <div class="nav">
-      <a href="/index.html"><button class="botones">x6</button></a>
-      <a href="/src/page2.html"><button class="botones">x4</button></a>
-      <a href="/src/page3.html"><button class="botones">x2</button></a>
+    <!--a24-->
+    <div class="video">
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/dxBBtqDEUQI"
+        title="EL PAIS ELIGE 🗳️ A24 EN VIVO | Elecciones 2023: Seguí el minuto a minuto de las PASO en Argentina"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     </div>
-  </body>
+    <!--TN-->
+    <div class="video">
+      <iframe width="700" height="240" src="https://www.youtube.com/embed/HPiv1pzIPRc" title="tn" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <!--Mitre-->
+    <div class="video">
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/KqSZo9oaEJQ"
+        title="EN VIVO CON MILEI Y MARRA VOTANDO | BREAK POINT" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <!--kronica-->
+    <div class="video">
+      <iframe width="700" height="240" src="https://www.youtube.com/embed/avly0uwZzOE" title="cronica" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <!--K5N-->
+    <div class="video">
+      <iframe width="700" height="240" src="https://www.youtube.com/embed/ekid6Im1dOc" title="k5n" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="nav">
+    <a href="/index.html"><button class="botones">x6</button></a>
+    <a href="/src/page2.html"><button class="botones">x4</button></a>
+    <a href="/src/page3.html"><button class="botones">x2</button></a>
+  </div>
+</body>
+
 </html>
