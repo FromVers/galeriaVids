@@ -32,9 +32,7 @@
 
     .botones {
       height: 30px;
-      /* Ajusta la altura de los botones */
       min-width: 100px;
-      /* Ajusta el ancho mínimo de los botones */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -49,8 +47,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       gap: 2px;
       padding: 2px;
       overflow: hidden;
@@ -72,29 +69,13 @@
 
     @media screen and (max-width: 768px) {
       .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
     }
 
     @media screen and (max-width: 480px) {
       .gallery {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      .gallery {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
       }
     }
   </style>
@@ -102,39 +83,31 @@
 
 <body>
   <div class="gallery">
-    
     <!--LN+-->
     <div class="video">
-    <iframe width="700" height="243" src="https://www.youtube.com/embed/LY2XEQ_SSXA?si=gRwQQMwkFr8Rq0ok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="700" height="243" src="https://www.youtube.com/embed/LY2XEQ_SSXA?si=gRwQQMwkFr8Rq0ok" title="LN+" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    
     <!--a24-->
     <div class="video">
-   <iframe width="700" height="243" src="https://www.youtube.com/embed/QGpHLgRnrx4?si=lD5rUttubgQi0mUL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="700" height="243" src="https://www.youtube.com/embed/QGpHLgRnrx4?si=lD5rUttubgQi0mUL" title="a24" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    
     <!--TN-->
     <div class="video">
-      <iframe width="700" height="243" src="https://www.youtube.com/embed/cb12KmMMDJA?si=6M1DkJ9mvlUaDPdG"title="YouTube video player" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen></iframe>
+      <iframe width="700" height="243" src="https://www.youtube.com/embed/cb12KmMMDJA?si=6M1DkJ9mvlUaDPdG" title="TN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    
     <!--C26-->
     <div class="video">
-<iframe width="700" height="243" src="https://www.youtube.com/embed/AZfZT9j_BX4?si=LNb8hI9WIa2lrTLg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="700" height="243" src="https://www.youtube.com/embed/k-nX5MrBIZM?si=SWfl2rhwa8nYHHOh" title="C26" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    
     <!--kronica-->
     <div class="video">
-      <iframe width="700" height="243" src="https://www.youtube.com/embed/avly0uwZzOE?si=e88EsmpG0RtoCS_x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="700" height="243" src="https://www.youtube.com/embed/avly0uwZzOE?si=e88EsmpG0RtoCS_x" title="kronica" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    
     <!--K5N-->
     <div class="video">
-<iframe width="700" height="243" src="https://www.youtube.com/embed/Hy4UCfsE6Yk?si=w1rrczKv08ao45tO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
+      <iframe width="700" height="243" src="https://www.youtube.com/embed/Hy4UCfsE6Yk?si=w1rrczKv08ao45tO" title="K5N" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-     
   </div>
-  
 </body>
 
 </html>
